@@ -1,5 +1,7 @@
 import e from "express";
+import connectionDataBase from "./src/config/dbconfig.js";
 
+await connectionDataBase(process.env.CONNECTION_STRING);
 const app = e();
 
 app.get("/api", (req,res) => {
